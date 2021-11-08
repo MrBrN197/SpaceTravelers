@@ -4,7 +4,7 @@ const JOIN_MISSION = 'spaceTravelers/missions/JOIN_MISSION';
 const LEAVE_MISSION = 'spaceTravelers/missions/LEAVE_MISSION';
 
 // Reducer
-export const reducer = (state = [], action = {}) => {
+export default (state = [], action = {}) => {
   switch (action.type) {
     // do reducer stuff
     default: return state;
