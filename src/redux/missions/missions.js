@@ -1,7 +1,7 @@
 // Actions
-const SET_ALL_BOOKS = 'spaceTravelers/missions/SET_ALL_BOOKS';
+const LOAD_MISSIONS = 'spaceTravelers/missions/LOAD_MISSIONS';
 const JOIN_MISSION = 'spaceTravelers/missions/JOIN_MISSION';
-const CANCEL_MISSION = 'spaceTravelers/missions/CANCEL_MISSION';
+const LEAVE_MISSION = 'spaceTravelers/missions/LEAVE_MISSION';
 
 // Reducer
 export const reducer = (state = [], action = {}) => {
@@ -11,6 +11,6 @@ export const reducer = (state = [], action = {}) => {
   }
 };
 // Action Creators
-export const setAllBooks = () => ({ type: SET_ALL_BOOKS });
+export const loadMissions = () => ({ type: LOAD_MISSIONS });
 export const joinMission = () => ({ type: JOIN_MISSION });
-export const cancelMission = () => ({ type: CANCEL_MISSION });
+export const cancelMission = () => ({ type: LEAVE_MISSION });
