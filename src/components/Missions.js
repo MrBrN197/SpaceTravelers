@@ -1,11 +1,15 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { loadMissions } from '../redux/missions/missions';
+import { fetchMissions } from '../redux/missions/missions';
 
+let API_LOADED = false;
 const Missions = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(loadMissions());
+    if (!API_LOADED) {
+      dispatch(fetchMissions());
+      API_LOADED = true;
+    }
   }, [dispatch]);
 
   return (

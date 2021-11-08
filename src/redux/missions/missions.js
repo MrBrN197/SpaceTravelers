@@ -19,7 +19,13 @@ export const cancelMission = () => ({ type: LEAVE_MISSION });
 // side effects, only as applicable
 // e.g. thunks, epics, etc
 export const fetchMissions = () => async (dispatch) => {
-  const data = [];
+  const resp = await fetch('https://api.spacexdata.com/v3/missions');
+  let data = await resp.json();
+  data = data.map((m) => ({
+    mission_id: m.mission_id,
+    mission_name: m.mission_name,
+    description: m.description,
+  }));
   dispatch(loadMissions(data));
   return data;
 };
