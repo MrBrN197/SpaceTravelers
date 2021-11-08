@@ -1,6 +1,8 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMissions } from '../redux/missions/missions';
+import Mission from './Mission';
+import styles from './Missions.module.scss';
 
 const Missions = () => {
   const dispatch = useDispatch();
@@ -12,14 +14,15 @@ const Missions = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className={styles.missions}>
       {missions.map((m) => (
-        <div key={m.mission_id}>
-          <h2>{m.mission_name}</h2>
-          <p>{m.description}</p>
-        </div>
+        <Mission
+          key={m.mission_id}
+          name={m.mission_name}
+          id={m.mission_name}
+          description={m.description}
+        />
       ))}
-
     </div>
   );
 };
