@@ -4,10 +4,10 @@ const JOIN_MISSION = 'spaceTravelers/missions/JOIN_MISSION';
 const LEAVE_MISSION = 'spaceTravelers/missions/LEAVE_MISSION';
 
 // Reducer
-export default (state = [], action = {}) => {
+export default (state = { loaded: false, data: [] }, action = {}) => {
   switch (action.type) {
     case LOAD_MISSIONS:
-      return action.payload;
+      return { loaded: true, data: action.payload };
     default: return state;
   }
 };
