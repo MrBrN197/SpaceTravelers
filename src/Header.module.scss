@@ -1,0 +1,25 @@
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+    color: #007bff;
+
+    li {
+      padding: 1rem;
+    }
+  }
+}
+
+.active {
+  text-decoration: underline;
+}
