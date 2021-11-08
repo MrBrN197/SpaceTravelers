@@ -4,7 +4,7 @@ import { fetchMissions } from '../redux/missions/missions';
 
 const Missions = () => {
   const dispatch = useDispatch();
-  const { loaded } = useSelector((state) => state.missions);
+  const { data: missions, loaded } = useSelector((state) => state.missions);
   useEffect(() => {
     if (!loaded) {
       dispatch(fetchMissions());
@@ -12,7 +12,15 @@ const Missions = () => {
   }, [dispatch]);
 
   return (
-    <div>Missions Page</div>
+    <div>
+      {missions.map((m) => (
+        <div key={m.mission_id}>
+          <h2>{m.mission_name}</h2>
+          <p>{m.description}</p>
+        </div>
+      ))}
+
+    </div>
   );
 };
 
