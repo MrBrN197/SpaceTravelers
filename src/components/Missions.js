@@ -17,13 +17,13 @@ const Missions = () => {
   return (
     <div className={styles.missions}>
       <MissionHeader />
-      {missions.map((m, idx) => (
+      {missions.map((m) => (
         <Mission
           key={m.mission_id}
           name={m.mission_name}
           id={m.mission_name}
           description={m.description}
-          odd={idx % 2}
+          reserved={!m.reserved}
         />
       ))}
     </div>
