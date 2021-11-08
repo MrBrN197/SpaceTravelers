@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import styles from './Mission.module.scss';
 
 const Mission = ({
   name,
@@ -7,14 +8,14 @@ const Mission = ({
   description,
 }) => (
   <>
-    <div>
-      <h2>{name}</h2>
+    <h2>{name}</h2>
+    <p>{description}</p>
+    <div className={styles.status}>
+      <span className="badge">Active Member</span>
     </div>
-    <div>
-      <p>{description}</p>
+    <div className={styles.status}>
+      <button type="button">Join Mission</button>
     </div>
-    <div>asfdasf</div>
-    <div>asfdasf</div>
   </>
 );
 

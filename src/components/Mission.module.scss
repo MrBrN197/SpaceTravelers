@@ -1,0 +1,38 @@
+
+.status {
+  display: flex;
+  align-items: center;
+
+  span {
+    background-color: rgb(46, 151, 192);
+    border-radius: 0.4em;
+    color: white;
+    display: block;
+    width: fit-content;
+    padding: 0.1em 0.3em;
+    margin: 0 auto;
+    font-weight: 600;
+    text-align: center;
+
+    &.active {
+      background-color: gray;
+      text-transform: uppercase;
+    }
+  }
+
+  button {
+    border: 1px solid gray;
+    background-color: transparent;
+    border-radius: 0.2em;
+    margin: 0 auto;
+    display: block;
+    padding: 0.8em 1em;
+    cursor: pointer;
+    font-weight: 600;
+
+    &.cancel {
+      color: crimson;
+      border-color: crimson;
+    }
+  }
+}
