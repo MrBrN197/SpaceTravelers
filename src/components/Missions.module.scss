@@ -1,6 +1,6 @@
 
 .missions {
-  $gray: gray;
+  $gray: rgb(182, 182, 182);
 
   display: grid;
   grid-template-columns: 2fr 6fr 1fr 1fr;
@@ -8,6 +8,8 @@
   border: 1px solid $gray;
   margin: 0 2rem;
   gap: 1px;
+  border-radius: 0.2rem;
+  overflow: hidden;
 
   > * {
     background-color: rgb(240, 240, 240);
