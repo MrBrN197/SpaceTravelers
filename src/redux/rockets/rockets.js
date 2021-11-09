@@ -1,6 +1,3 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
-
 // Actions
 const TOGGLE_ROCKET = 'RESERVE_ROCKET';
 const LOAD_ROCKETS_IN_PROGRESS = 'LOAD_ROCKETS_IN_PROGRESS';

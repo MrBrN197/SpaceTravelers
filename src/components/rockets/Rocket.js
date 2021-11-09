@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
@@ -58,8 +57,7 @@ const Rocket = (props) => {
 };
 
 Rocket.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  rocket: PropTypes.object.isRequired,
+  rocket: PropTypes.isRequired,
 };
 
 export default Rocket;
