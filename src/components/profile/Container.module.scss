@@ -8,7 +8,8 @@
 }
 
 .container {
-  border-radius: 0.2rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
   display: flex;
   gap: 1px;
   background-color: $gray;
