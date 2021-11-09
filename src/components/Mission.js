@@ -12,15 +12,16 @@ const Mission = ({
     console.log('Join Mission');
   };
 
+  const reservedClass = reserved ? styles.reserved : '';
   return (
     <>
       <h2>{name}</h2>
       <p>{description}</p>
       <div className={styles.status}>
-        <span className={reserved && styles.reserved}>{reserved ? 'Active Member' : 'NOT MEMBER'}</span>
+        <span className={reservedClass}>{reserved ? 'Active Member' : 'NOT MEMBER'}</span>
       </div>
       <div className={styles.status}>
-        <button onClick={clickHanlder} type="button" className={reserved && styles.reserved}>{reserved ? 'Join Mission' : 'Leave Mission'}</button>
+        <button onClick={clickHanlder} type="button" className={reservedClass}>{reserved ? 'Leave Mission' : 'Join Mission'}</button>
       </div>
     </>
   );
