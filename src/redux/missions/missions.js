@@ -8,12 +8,22 @@ export default (state = { loaded: false, data: [] }, action = {}) => {
   switch (action.type) {
     case LOAD_MISSIONS:
       return { loaded: true, data: action.payload };
+    case JOIN_MISSION:
+      return {
+        ...state,
+        data: state.data.map((m) => {
+          if (m.mission_id === action.payload) {
+            return { ...m, reserved: true };
+          }
+          return m;
+        }),
+      };
     default: return state;
   }
 };
 // Action Creators
 export const loadMissions = (missions) => ({ type: LOAD_MISSIONS, payload: missions });
-export const joinMission = () => ({ type: JOIN_MISSION });
+export const joinMission = (id) => ({ type: JOIN_MISSION, payload: id });
 export const cancelMission = () => ({ type: LEAVE_MISSION });
 
 // side effects, only as applicable
