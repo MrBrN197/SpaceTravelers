@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMissions } from '../../redux/missions/missions';
 
-const MyMissions = () => {
+const Container = () => {
   const { loaded, data: missions } = useSelector((state) => state.missions);
   const reservedMissions = missions.filter((m) => m.reserved);
 
@@ -23,4 +23,4 @@ const MyMissions = () => {
   );
 };
 
-export default MyMissions;
+export default Container;
