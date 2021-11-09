@@ -1,8 +1,14 @@
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchMissions } from '../../redux/missions/missions';
 
 const MyMissions = () => {
-  const missions = useSelector((state) => state.missions.data);
+  const { loaded, data: missions } = useSelector((state) => state.missions);
   const reservedMissions = missions.filter((m) => m.reserved);
+
+  const dispatch = useDispatch();
+  useEffect(() => !loaded && dispatch(fetchMissions()), []);
+
   return (
     <div>
       <h2>My Missions</h2>
