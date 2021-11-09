@@ -7,18 +7,24 @@ const Mission = ({
   id,
   reserved,
   description,
-}) => (
-  <>
-    <h2>{name}</h2>
-    <p>{description}</p>
-    <div className={styles.status}>
-      <span className={reserved && styles.reserved}>{reserved ? 'Active Member' : 'NOT MEMBER'}</span>
-    </div>
-    <div className={styles.status}>
-      <button type="button" className={reserved && styles.reserved}>{reserved ? 'Join Mission' : 'Leave Mission'}</button>
-    </div>
-  </>
-);
+}) => {
+  const clickHanlder = () => {
+    console.log('Join Mission');
+  };
+
+  return (
+    <>
+      <h2>{name}</h2>
+      <p>{description}</p>
+      <div className={styles.status}>
+        <span className={reserved && styles.reserved}>{reserved ? 'Active Member' : 'NOT MEMBER'}</span>
+      </div>
+      <div className={styles.status}>
+        <button onClick={clickHanlder} type="button" className={reserved && styles.reserved}>{reserved ? 'Join Mission' : 'Leave Mission'}</button>
+      </div>
+    </>
+  );
+};
 
 Mission.defaultProps = {
   reserved: false,
