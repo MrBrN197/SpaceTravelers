@@ -48,6 +48,19 @@ const initialState = { isLoading: false, data: InitialData };
 export const rocketsReducer = (state = initialState, action = {}) => {
   const { type, payload } = action;
   switch (type) {
+    case LOAD_ROCKETS_SUCCESS: {
+      const { rockets } = payload;
+      return { ...state, isLoading: false, data: rockets };
+    }
+    case LOAD_ROCKETS_IN_PROGRESS:
+      return {
+        ...state, isLoading: true,
+      };
+    case LOAD_ROCKETS_FAILURE:
+      return {
+        ...state,
+        isLoading: false,
+      };
     // do reducer stuff
     default: return state;
   }
@@ -64,18 +77,29 @@ export const cancelReservation = (id) => ({
 });
 
 export const loadRocketsInProgress = () => ({
-  type: LOAD_TODOS_IN_PROGRESS,
+  type: LOAD_ROCKETS_IN_PROGRESS,
 });
 
-export const loadRocketsSuccess = (todos) => ({
-  type: LOAD_TODOS_SUCCESS,
-  payload: { todos },
+export const loadRocketsSuccess = (rockets) => ({
+  type: LOAD_ROCKETS_SUCCESS,
+  payload: { rockets },
 });
 
 export const loadRocketsFailure = () => ({
-  type: LOAD_TODOS_FAILURE,
+  type: LOAD_ROCKETS_FAILURE,
 });
 // side effects, only as applicable
 // e.g. thunks, epics, etc
-export const effect = () => {
-};
+export const loadRockets = () => (
+  async (dispatch) => {
+    try {
+      dispatch(loadRocketsInProgress());
+      const response = await fetch('https://api.spacexdata.com/v3/rockets');
+      const rockets = await response.json();
+
+      dispatch(loadRocketsSuccess(rockets));
+    } catch (e) {
+      dispatch(loadRocketsFailure());
+    }
+  }
+);
