@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
-import { useSelector, shallowEqual, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Rocket from './Rocket';
 import styles from './Rockets.module.scss';
 import { loadRockets } from '../../redux/rockets/rockets';
+import { getRockets, getLoading } from './selectors';
 
 const Rockets = () => {
   const dispatch = useDispatch();
-  const rockets = useSelector((state) => state.rockets.data, shallowEqual);
-  const loading = useSelector((state) => state.rockets.isLoading, shallowEqual);
+  const rockets = useSelector(getRockets);
+  const loading = useSelector(getLoading);
   useEffect(() => rockets.length === 0 && dispatch(loadRockets()), []);
 
   const loadingMessage = <div> Loading rockets...</div>;
