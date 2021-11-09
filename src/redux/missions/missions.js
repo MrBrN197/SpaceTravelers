@@ -3,6 +3,23 @@ const LOAD_MISSIONS = 'spaceTravelers/missions/LOAD_MISSIONS';
 const JOIN_MISSION = 'spaceTravelers/missions/JOIN_MISSION';
 const LEAVE_MISSION = 'spaceTravelers/missions/LEAVE_MISSION';
 
+const setReserved = (state = {}, action) => {
+  switch (action.type) {
+    case JOIN_MISSION:
+      if (state.mission_id === action.payload) {
+        return { ...state, reserved: true };
+      }
+      return state;
+    case LEAVE_MISSION:
+      if (state.mission_id === action.payload) {
+        return { ...state, reserved: false };
+      }
+      return state;
+    default:
+      return state;
+  }
+};
+
 // Reducer
 export default (state = { loaded: false, data: [] }, action = {}) => {
   switch (action.type) {
@@ -11,22 +28,12 @@ export default (state = { loaded: false, data: [] }, action = {}) => {
     case JOIN_MISSION:
       return {
         ...state,
-        data: state.data.map((m) => {
-          if (m.mission_id === action.payload) {
-            return { ...m, reserved: true };
-          }
-          return m;
-        }),
+        data: state.data.map((m) => setReserved(m, action)),
       };
     case LEAVE_MISSION:
       return {
         ...state,
-        data: state.data.map((m) => {
-          if (m.mission_id === action.payload) {
-            return { ...m, reserved: false };
-          }
-          return m;
-        }),
+        data: state.data.map((m) => setReserved(m, action)),
       };
     default: return state;
   }
