@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
+import styles from './Container.module.scss';
 
 const Container = ({
   title,
   data,
 }) => (
   <div>
-    <h2>{title}</h2>
-    <ul>
+    <h2 className={styles.title}>{title}</h2>
+    <ul className={styles.container}>
       {
           data.map(({ name, id }) => (
             <li key={id}>{name}</li>
