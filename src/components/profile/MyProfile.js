@@ -3,23 +3,20 @@ import { useSelector, useDispatch } from 'react-redux';
 import { fetchMissions } from '../../redux/missions/missions';
 import Container from './Container';
 import styles from './MyProfile.module.scss';
+import { getLoaded, getReservedMissions } from '../missions/selectors';
 
 const MyProfile = () => {
   const dispatch = useDispatch();
 
-  const { loaded, data: missions } = useSelector((state) => state.missions);
+  const reservedMissions = useSelector(getReservedMissions);
+  const loaded = useSelector(getLoaded);
   useEffect(() => !loaded && dispatch(fetchMissions()), [dispatch, loaded]);
-
-  const reservedMissions = missions.filter((m) => m.reserved);
 
   return (
     <div className={styles.profile}>
       <Container
-        title="My Rockets"
-        data={reservedMissions.map((m) => ({
-          name: m.mission_name,
-          id: m.mission_id,
-        }))}
+        title="My Missions"
+        data={reservedMissions}
       />
     </div>
   );
