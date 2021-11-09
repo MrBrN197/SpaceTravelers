@@ -7,7 +7,7 @@ const MyMissions = () => {
   const reservedMissions = missions.filter((m) => m.reserved);
 
   const dispatch = useDispatch();
-  useEffect(() => !loaded && dispatch(fetchMissions()), []);
+  useEffect(() => !loaded && dispatch(fetchMissions()), [dispatch, loaded]);
 
   return (
     <div>

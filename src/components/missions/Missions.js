@@ -12,7 +12,7 @@ const Missions = () => {
     if (!loaded) {
       dispatch(fetchMissions());
     }
-  }, [dispatch]);
+  }, [dispatch, loaded]);
 
   return (
     <div className={styles.missions}>
