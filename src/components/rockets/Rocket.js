@@ -1,7 +1,10 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import styles from './Rockets.module.scss';
+import { toggleRocket } from '../../redux/rockets/rockets';
 
 const Unreserved = styled.button`
 background-color:rgb(0,123,255);
@@ -29,7 +32,11 @@ background-color: rgb(24,162,184);
 `;
 
 const Rocket = (props) => {
+  const dispatch = useDispatch();
   const { rocket } = props;
+  const toggleClick = () => {
+    dispatch(toggleRocket(rocket.id));
+  };
   return (
     <div className={styles.rocket_div}>
       <img className={styles.rocket_img} src={rocket.flickr_images[0]} alt="rocket" />
@@ -38,12 +45,12 @@ const Rocket = (props) => {
           {rocket.rocket_name}
         </h3>
         <p>
-          {rocket.active ? <Badge> Reserved </Badge> : null }
+          {rocket.reserved ? <Badge> Reserved </Badge> : null}
           {rocket.description}
         </p>
-        {!rocket.active
-          ? <Unreserved type="button"> Reserve Rocket</Unreserved>
-          : <Reserved type="button"> Cancel Reservation</Reserved>}
+        {!rocket.reserved
+          ? <Unreserved onClick={toggleClick} type="button"> Reserve Rocket</Unreserved>
+          : <Reserved onClick={toggleClick} type="button"> Cancel Reservation</Reserved>}
 
       </div>
     </div>

@@ -1,5 +1,5 @@
 import { Route, Switch } from 'react-router-dom';
-import Rockets from './components/Rockets';
+import Rockets from './components/rockets/Rockets';
 import Header from './Header';
 
 function App() {
