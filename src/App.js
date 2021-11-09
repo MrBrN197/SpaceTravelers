@@ -1,6 +1,6 @@
 import { Route, Switch } from 'react-router-dom';
 import Header from './Header';
-import Missions from './components/Missions';
+import Missions from './components/missions/Missions';
 
 function App() {
   return (
