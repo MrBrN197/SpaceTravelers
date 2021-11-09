@@ -41,7 +41,7 @@ export default (state = { loaded: false, data: [] }, action = {}) => {
 // Action Creators
 export const loadMissions = (missions) => ({ type: LOAD_MISSIONS, payload: missions });
 export const joinMission = (id) => ({ type: JOIN_MISSION, payload: id });
-export const leaveMission = () => ({ type: LEAVE_MISSION });
+export const leaveMission = (id) => ({ type: LEAVE_MISSION, payload: id });
 
 // side effects, only as applicable
 // e.g. thunks, epics, etc
