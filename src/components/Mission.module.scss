@@ -21,11 +21,12 @@
   }
 
   button {
-    $color: rgb(240, 61, 61);
+    $gray: gray;
+    $red: rgb(240, 61, 61);
 
     background-color: transparent;
-    border: 1px solid $color;
-    color: $color;
+    border: 1px solid $gray;
+    color: $gray;
     border-radius: 0.2em;
     cursor: pointer;
     display: block;
@@ -36,16 +37,16 @@
     transition-duration: 120ms;
 
     &:hover {
-      background-color: $color;
+      background-color: $gray;
       color: white;
     }
 
     &.reserved {
-      border-color: $gray;
-      color: $gray;
+      border-color: $red;
+      color: $red;
 
       &:hover {
-        background-color: $gray;
+        background-color: $red;
         color: white;
       }
     }
