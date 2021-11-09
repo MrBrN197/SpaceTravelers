@@ -2,26 +2,33 @@
   background-color: rgb(254, 254, 254);
   align-items: center;
   margin: 2rem;
+
   .rocket_div {
     display: flex;
+
     .rocket_img {
       width: 12rem;
       height: 10rem;
     }
+
     .rocket_details {
       margin: 0 1rem 1rem 1rem;
+
       > h3 {
         font-size: larger;
       }
+
       > p {
         line-height: 1.6;
         font-size: 1.2em;
       }
+
       > button {
         padding: 1rem;
       }
+
       > * {
-        margin-bottom: .8rem;
+        margin-bottom: 0.8rem;
       }
     }
   }
