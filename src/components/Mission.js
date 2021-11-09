@@ -1,15 +1,21 @@
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { joinMission, leaveMission } from '../redux/missions/missions';
 import styles from './Mission.module.scss';
 
 const Mission = ({
   name,
-  /* eslint-disable-next-line */
   id,
   reserved,
   description,
 }) => {
+  const dispatch = useDispatch();
   const clickHanlder = () => {
-    console.log('Join Mission');
+    if (reserved) {
+      dispatch(leaveMission(id));
+    } else {
+      dispatch(joinMission(id));
+    }
   };
 
   const reservedClass = reserved ? styles.reserved : '';
