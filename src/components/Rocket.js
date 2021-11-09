@@ -42,8 +42,8 @@ const Rocket = (props) => {
           {rocket.description}
         </p>
         {!rocket.active
-          ? <Unreserved onClick="" type="button"> Reserve Rocket</Unreserved>
-          : <Reserved onClick="" type="button"> Cancel Reservation</Reserved>}
+          ? <Unreserved type="button"> Reserve Rocket</Unreserved>
+          : <Reserved type="button"> Cancel Reservation</Reserved>}
 
       </div>
     </div>
