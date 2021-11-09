@@ -21,7 +21,7 @@ const Missions = () => {
         <Mission
           key={m.mission_id}
           name={m.mission_name}
-          id={m.mission_name}
+          id={m.mission_id}
           description={m.description}
           reserved={!m.reserved}
         />
