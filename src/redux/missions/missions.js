@@ -18,6 +18,16 @@ export default (state = { loaded: false, data: [] }, action = {}) => {
           return m;
         }),
       };
+    case LEAVE_MISSION:
+      return {
+        ...state,
+        data: state.data.map((m) => {
+          if (m.mission_id === action.payload) {
+            return { ...m, reserved: false };
+          }
+          return m;
+        }),
+      };
     default: return state;
   }
 };
