@@ -35,9 +35,7 @@ const Rocket = (props) => {
       <img className={styles.rocket_img} src={rocket.flickr_images[0]} alt="rocket" />
       <div className={styles.rocket_details}>
         <h3>
-          {' '}
           {rocket.rocket_name}
-          {' '}
         </h3>
         <p>
           {rocket.active ? <Badge> Reserved </Badge> : null }
