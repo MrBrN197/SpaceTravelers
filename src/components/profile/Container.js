@@ -1,26 +1,27 @@
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchMissions } from '../../redux/missions/missions';
+import PropTypes from 'prop-types';
 
-const Container = () => {
-  const { loaded, data: missions } = useSelector((state) => state.missions);
-  const reservedMissions = missions.filter((m) => m.reserved);
-
-  const dispatch = useDispatch();
-  useEffect(() => !loaded && dispatch(fetchMissions()), [dispatch, loaded]);
-
-  return (
-    <div>
-      <h2>My Missions</h2>
-      <ul>
-        {
-          reservedMissions.map((m) => (
-            <li key={m.mission_id}>{m.mission_name}</li>
+const Container = ({
+  title,
+  data,
+}) => (
+  <div>
+    <h2>{title}</h2>
+    <ul>
+      {
+          data.map(({ name, id }) => (
+            <li key={id}>{name}</li>
           ))
         }
-      </ul>
-    </div>
-  );
+    </ul>
+  </div>
+);
+
+Container.propTypes = {
+  title: PropTypes.string.isRequired,
+  data: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+  })).isRequired,
 };
 
 export default Container;
