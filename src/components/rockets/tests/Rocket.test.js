@@ -11,7 +11,6 @@ describe('Rocket component tests', () => {
     reserved: false,
     flickr_images: ['test'],
   };
-  // const reserved = { ...unreserved, reserved: true };
   const testComp = (rocket) => (
     <Provider store={store}>
       <Rocket rocket={rocket} />
@@ -28,7 +27,7 @@ describe('Rocket component tests', () => {
 
   test('correctly renders Rocket that is  reserved', () => {
     render(
-      testComp({...rocket,reserved:true}),
+      testComp({ ...rocket, reserved: true }),
     );
 
     const notReserved = screen.getByText('Cancel Reservation');
