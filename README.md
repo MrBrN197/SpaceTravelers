@@ -14,6 +14,10 @@
 "Space Travelers' Hub" is A web application for a company that provides commercial and scientific space travel services, We have been  working with the real live data from the SpaceX API. The application will allow users to book rockets and join selected space missions.
 The Space Travelers' Hub consists of Rockets, Missions, and the My Profile section.
 
+![Rockets](https://user-images.githubusercontent.com/29541335/141110078-f3941014-a4cc-491a-8875-419fb2d9582b.png)
+![Missions](https://user-images.githubusercontent.com/29541335/141110128-6114f633-977e-4421-92ad-73f319a142a4.png)
+![My Profile section](https://user-images.githubusercontent.com/29541335/141110154-bca00c72-77de-4bb0-9476-39a7c7906529.png)
+
 
 
 
@@ -25,7 +29,7 @@ The Space Travelers' Hub consists of Rockets, Missions, and the My Profile secti
 
 * ReactJS
 * Redux
-* [Bookstore API](https://www.notion.so/Bookstore-API-51ea269061f849118c65c0a53e88a739)
+
 
 ## Getting Started
 
@@ -35,10 +39,10 @@ The Space Travelers' Hub consists of Rockets, Missions, and the My Profile secti
     git clone https://github.com/MrBrN197/SpaceTravelers.git
     ```
 
-* Navigate to bookstore folder/directory
+* Navigate to SpaceTravelers folder/directory
 
     ```bash
-    cd bookstore
+    cd SpaceTravelers
     ```
 
 * On the comandline, at the project's root, run ```npm install``` to install app dependencies
