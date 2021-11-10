@@ -7,10 +7,16 @@ import { toggleRocket } from '../../redux/rockets/rockets';
 
 const Unreserved = styled.button`
 background-color:rgb(0,123,255);
+:hover {
+  color:rgb(0,123,255);
+  background-color:white;
+  cursor: pointer;
+} 
 color: white;
 border: none;
 font-size:1rem;
 border-radius: 5px;
+transition: all 900ms; 
 `;
 const Reserved = styled.button`
 border: 1px #111 solid;
@@ -18,6 +24,12 @@ color:  grey;
 font-size:1rem;
 border-radius: 5px;
 background: white;
+:hover {
+  color:white;
+  background-color:black;
+  cursor: pointer;
+} 
+transition: all 900ms; 
 `;
 
 const Badge = styled.span`

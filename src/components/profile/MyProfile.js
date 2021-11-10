@@ -1,22 +1,22 @@
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchMissions } from '../../redux/missions/missions';
+import { useSelector } from 'react-redux';
 import Container from './Container';
 import styles from './MyProfile.module.scss';
-import { getLoaded, getReservedMissions } from '../missions/selectors';
+import { getReservedMissions } from '../missions/selectors';
+import { getReservedRockets } from '../rockets/selectors';
 
 const MyProfile = () => {
-  const dispatch = useDispatch();
-
   const reservedMissions = useSelector(getReservedMissions);
-  const loaded = useSelector(getLoaded);
-  useEffect(() => !loaded && dispatch(fetchMissions()), [dispatch, loaded]);
+  const reservedRockets = useSelector(getReservedRockets);
 
   return (
     <div className={styles.profile}>
       <Container
         title="My Missions"
         data={reservedMissions}
+      />
+      <Container
+        title="My Rockets"
+        data={reservedRockets}
       />
     </div>
   );
