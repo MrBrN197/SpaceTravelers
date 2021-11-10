@@ -1,4 +1,4 @@
-# Bookstore CMS
+# Space Travelers' Hub
 
 ## Table of Contents
 
