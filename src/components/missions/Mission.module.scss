@@ -1,0 +1,54 @@
+
+.status {
+  display: flex;
+  align-items: center;
+  $gray: rgb(109, 109, 109);
+
+  span {
+    background-color: $gray;
+    border-radius: 0.4em;
+    color: white;
+    display: block;
+    width: fit-content;
+    padding: 0.1em 0.3em;
+    margin: 0 auto;
+    font-weight: 600;
+    text-align: center;
+
+    &.reserved {
+      background-color: rgb(46, 151, 192);
+    }
+  }
+
+  button {
+    $gray: gray;
+    $red: rgb(240, 61, 61);
+
+    background-color: transparent;
+    border: 1px solid $gray;
+    color: $gray;
+    border-radius: 0.2em;
+    cursor: pointer;
+    display: block;
+    font-weight: 600;
+    margin: 0 auto;
+    padding: 0.8em 1em;
+    transition-property: background-color, color;
+    transition-duration: 120ms;
+
+    &:hover {
+      background-color: $gray;
+      color: white;
+    }
+
+    &.reserved {
+      border-color: $red;
+      color: $red;
+
+      &:hover {
+        background-color: $red;
+        color: white;
+      }
+    }
+  }
+}
