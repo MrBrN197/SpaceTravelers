@@ -14,7 +14,9 @@ const Missions = () => {
     }
   }, [dispatch, loaded]);
 
-  return (
+  const loadingMessage = <div> Loading missions...</div>;
+
+  const content = (missions) => (
     <div className={styles.missions}>
       <MissionHeader />
       {missions.map((m) => (
@@ -28,6 +30,12 @@ const Missions = () => {
       ))}
     </div>
   );
+
+  return loaded ? (
+    <>
+      {content(missions)}
+    </>
+  ) : loadingMessage;
 };
 
 export default Missions;
