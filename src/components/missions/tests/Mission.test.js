@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import Mission from '../Mission';
 import store from '../../../redux/configureStore';
 
-describe('Header component tests', () => {
+describe('Mission component tests', () => {
   test('correctly renders Mission that is not a reserved', () => {
     render(
       <Provider store={store}>
