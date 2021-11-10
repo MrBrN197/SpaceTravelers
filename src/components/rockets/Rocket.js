@@ -60,8 +60,8 @@ const Rocket = (props) => {
           {rocket.description}
         </p>
         {!rocket.reserved
-          ? <Unreserved onClick={toggleClick} type="button"> Reserve Rocket</Unreserved>
-          : <Reserved onClick={toggleClick} type="button"> Cancel Reservation</Reserved>}
+          ? <Unreserved onClick={toggleClick} type="button">Reserve Rocket</Unreserved>
+          : <Reserved onClick={toggleClick} type="button">Cancel Reservation</Reserved>}
 
       </div>
     </div>
@@ -69,7 +69,8 @@ const Rocket = (props) => {
 };
 
 Rocket.propTypes = {
-  rocket: PropTypes.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  rocket: PropTypes.object.isRequired,
 };
 
 export default Rocket;
