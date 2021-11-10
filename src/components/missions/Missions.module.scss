@@ -1,6 +1,9 @@
-
 .missions {
   $gray: rgb(182, 182, 182);
+
+  p {
+    line-height: 1.6;
+  }
 
   display: grid;
   grid-template-columns: 2fr 6fr 1fr 1fr;

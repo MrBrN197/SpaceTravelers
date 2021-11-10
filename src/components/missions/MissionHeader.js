@@ -1,8 +1,8 @@
 const MissionHeader = () => (
   <>
-    <div>Mission</div>
-    <div>Descripton</div>
-    <div>Status</div>
+    <h2>Mission</h2>
+    <h2>Descripton</h2>
+    <h2>Status</h2>
     <div />
   </>
 );
