@@ -5,7 +5,7 @@ const Header = () => (
   <header className={styles.header}>
     <div className={styles.logo}>
       <img id="logo" src="https://cdn-icons-png.flaticon.com/512/3212/3212608.png" alt="" />
-      <h1><Link to="/">Space Travelers</Link></h1>
+      <h1><Link to="/">Space Travelers&lsquo; Hub</Link></h1>
     </div>
     <ul>
       <li><NavLink to="/rockets" activeClassName={styles.active}>Rockets</NavLink></li>

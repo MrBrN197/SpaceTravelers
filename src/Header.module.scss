@@ -1,9 +1,14 @@
-
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2.5rem;
+  border-bottom: rgb(189, 189, 189) solid 1px;
+  margin: 0 2rem 1rem 2rem;
+
+  h1 {
+    font-weight: 500;
+  }
 
   .logo {
     display: flex;
@@ -15,7 +20,11 @@
     color: #007bff;
 
     li {
-      padding: 1rem;
+      padding: 0 1rem;
+    }
+
+    > *:nth-child(2) {
+      border-right: 1px solid rgb(189, 189, 189);
     }
   }
 }
