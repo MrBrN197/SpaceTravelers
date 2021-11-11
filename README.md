@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# Space Travelers' Hub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+* [About the Project](#about-the-project)
+* [Built With](#built-with)
+* [Getting Started](#getting-started)
+* [Contributing](#contributing)
+* [Authors](#author)
+* [Acknowledgements](#acknowledgements)
 
-In the project directory, you can run:
+## About Project
 
-### `yarn start`
+"Space Travelers' Hub" is A web application for a company that provides commercial and scientific space travel services, We have been  working with the real live data from the SpaceX API. The application will allow users to book rockets and join selected space missions.
+The Space Travelers' Hub consists of Rockets, Missions, and the My Profile section.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Rockets](https://user-images.githubusercontent.com/29541335/141110078-f3941014-a4cc-491a-8875-419fb2d9582b.png)
+![Missions](https://user-images.githubusercontent.com/29541335/141110128-6114f633-977e-4421-92ad-73f319a142a4.png)
+![My Profile section](https://user-images.githubusercontent.com/29541335/141110154-bca00c72-77de-4bb0-9476-39a7c7906529.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+<!-- ## [Live Demo - GH pages]() -->
+<!-- ## [Live Demo - Netlify]() -->
+## [Live Demo - Heroku](https://space-travelers-hub.herokuapp.com/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Built With
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* ReactJS
+* Redux
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* Clone this repo <https://github.com/MrBrN197/SpaceTravelers>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    git clone https://github.com/MrBrN197/SpaceTravelers.git
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* Navigate to SpaceTravelers folder/directory
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    ```bash
+    cd SpaceTravelers
+    ```
 
-## Learn More
+* On the comandline, at the project's root, run ```npm install``` to install app dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Next, run ```npm start``` which will run the app in the development mode.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Code Splitting
+* ALTERNATIVELY
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  * Just run ```npm run build``` which will build the project and generate output files into the ```build``` directory.
 
-### Analyzing the Bundle Size
+  * Go to ```build``` directory and manually open ```index.html``` to interact with the app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributions, issues, and feature requests are welcome!
 
-### Advanced Configuration
+Feel free to check the [issues page](https://github.com/Lameck1/bookstore/issues)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  1. Fork the Project
+  2. Create your Feature Branch (`git checkout -b feature/newFeature`)
+  3. Commit your Changes (`git commit -m 'Add some newFeature'`)
+  4. Push to the Branch (`git push -u origin feature/newFeature`)
+  5. Open a Pull Request
 
-### Deployment
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+👤 **Bishoy Samwel Faheem**
 
-### `yarn build` fails to minify
+- GitHub: [@Bishoy Samwel Faheem](https://github.com/Bishoy-Samwel)
+- LinkedIn: [Bishoy Samwel](https://www.linkedin.com/in/bishoy-samwuel-ss/)
+- Twitter: [@bisho](https://twitter.com/BishoFaheem15)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+👤 **Brian Orora**
+
+- GitHub: [@MrBrN197](https://github.com/MrBrN197)
+- Twitter: [@MrBrN197](https://twitter.com/MrBrN197)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/brian-orora-2b7883a7/)
+
+## Acknowledgements
+
+* [ReactJS Organization](https://reactjs.org/) for the amazing [Documentation](https://reactjs.org/docs/getting-started.html) on React.
+* [Redux Organization](https://redux.js.org/) for the amazing [Redux Essentials Tutorial](https://redux.js.org/tutorials/essentials/part-1-overview-concepts) on React.
+
+## Show your support
+
+Give a ⭐️ if you like this project!

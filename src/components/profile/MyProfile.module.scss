@@ -1,0 +1,11 @@
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
+  gap: 2rem;
+
+  > * {
+    flex-grow: 1;
+  }
+}

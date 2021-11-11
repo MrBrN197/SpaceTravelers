@@ -1,0 +1,26 @@
+
+@use '../../variables' as *;
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.container {
+  border-radius: 0.4rem;
+  overflow: hidden;
+  display: flex;
+  gap: 1px;
+  background-color: $gray;
+  flex-direction: column;
+  border: 1px solid $gray;
+
+  li {
+    background-color: white;
+    padding: 1rem;
+    padding-bottom: 3rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
