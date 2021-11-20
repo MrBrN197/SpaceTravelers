@@ -62,7 +62,7 @@ The Space Travelers' Hub consists of Rockets, Missions, and the My Profile secti
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Lameck1/bookstore/issues)
+Feel free to check the [issues page](../../issues)
 
   1. Fork the Project
   2. Create your Feature Branch (`git checkout -b feature/newFeature`)
