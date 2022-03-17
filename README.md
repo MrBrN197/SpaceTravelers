@@ -23,7 +23,7 @@ The Space Travelers' Hub consists of Rockets, Missions, and the My Profile secti
 
 <!-- ## [Live Demo - GH pages]() -->
 <!-- ## [Live Demo - Netlify]() -->
-## [Live Demo - Heroku](https://space-travelers-hub.herokuapp.com/)
+## [Live Demo - Heroku](https://spacextravellers.herokuapp.com/)
 
 ## Built With
 
