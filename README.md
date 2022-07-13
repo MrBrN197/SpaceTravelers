@@ -14,7 +14,13 @@
 "Space Travelers' Hub" is A web application for a company that provides commercial and scientific space travel services, We have been  working with the real live data from the SpaceX API. The application will allow users to book rockets and join selected space missions.
 The Space Travelers' Hub consists of Rockets, Missions, and the My Profile section.
 
+In this application, the main page displays a list of "shelves" (i.e. categories), each of which contains a number of books. The three shelves are:
+    *  Currently Reading
+    *  Want to Read
+    *  Read
 ![Main](https://user-images.githubusercontent.com/29541335/178755492-e440e006-6dc7-46d2-a53e-a52d927b877c.png)
+
+The main page also has a link to /search, a search page that allows you to find books to add to your library.
 ![Search](https://user-images.githubusercontent.com/29541335/178756292-9754b173-f136-4962-b846-da9993fbb632.png)
 
 
@@ -22,7 +28,6 @@ The Space Travelers' Hub consists of Rockets, Missions, and the My Profile secti
 
 <!-- ## [Live Demo - GH pages]() -->
 <!-- ## [Live Demo - Netlify]() -->
-## [Live Demo - Heroku](https://spacextravellers.herokuapp.com/)
 
 ## Built With
 
