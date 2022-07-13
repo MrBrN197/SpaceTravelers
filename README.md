@@ -14,22 +14,16 @@
 "Space Travelers' Hub" is A web application for a company that provides commercial and scientific space travel services, We have been  working with the real live data from the SpaceX API. The application will allow users to book rockets and join selected space missions.
 The Space Travelers' Hub consists of Rockets, Missions, and the My Profile section.
 
-In this application, the main page displays a list of "shelves" (i.e. categories), each of which contains a number of books. The three shelves are:
-    *  Currently Reading
-    *  Want to Read
-    *  Read
-
-![Main](https://user-images.githubusercontent.com/29541335/178755492-e440e006-6dc7-46d2-a53e-a52d927b877c.png)
-
-The main page also has a link to /search, a search page that allows you to find books to add to your library.
-
-![Search](https://user-images.githubusercontent.com/29541335/178756292-9754b173-f136-4962-b846-da9993fbb632.png)
+![Rockets](https://user-images.githubusercontent.com/29541335/141110078-f3941014-a4cc-491a-8875-419fb2d9582b.png)
+![Missions](https://user-images.githubusercontent.com/29541335/141110128-6114f633-977e-4421-92ad-73f319a142a4.png)
+![My Profile section](https://user-images.githubusercontent.com/29541335/141110154-bca00c72-77de-4bb0-9476-39a7c7906529.png)
 
 
 
 
 <!-- ## [Live Demo - GH pages]() -->
 <!-- ## [Live Demo - Netlify]() -->
+## [Live Demo - Heroku](https://space-travelers-hub.herokuapp.com/)
 
 ## Built With
 
@@ -68,7 +62,7 @@ The main page also has a link to /search, a search page that allows you to find 
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues)
+Feel free to check the [issues page](https://github.com/Lameck1/bookstore/issues)
 
   1. Fork the Project
   2. Create your Feature Branch (`git checkout -b feature/newFeature`)
