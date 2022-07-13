@@ -18,9 +18,11 @@ In this application, the main page displays a list of "shelves" (i.e. categories
     *  Currently Reading
     *  Want to Read
     *  Read
+
 ![Main](https://user-images.githubusercontent.com/29541335/178755492-e440e006-6dc7-46d2-a53e-a52d927b877c.png)
 
 The main page also has a link to /search, a search page that allows you to find books to add to your library.
+
 ![Search](https://user-images.githubusercontent.com/29541335/178756292-9754b173-f136-4962-b846-da9993fbb632.png)
 
 
